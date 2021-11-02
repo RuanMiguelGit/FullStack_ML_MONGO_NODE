@@ -1,0 +1,30 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/api/server.js",
+  "scripts": {
+    "test": "mocha src/tests/**/*$NAME*.test.js --exit",
+    "start": "node .",
+    "dev": "nodemon .",
+    "lint": "eslint ./src  --ext .js",
+    "lint:fix": "eslint ./src  --ext .js --fix",
+    "style:check": "prettier --check 'src/**/*.js' 'test/**/*.js'",
+    "style:fix": "prettier --write 'src/**/*.js' 'test/**/*.js'"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.1.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
+    "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
