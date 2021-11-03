@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import appContext from './appContext';
+import  { getDataFromMercadoLivre } from '../Clients/mercadoLivre'
 
 function Provider({ children }) {
   const [query, setQuery] = useState('');
   const [dropDownSource, setDropDownSource] = useState('');
   const [dropDownProduct, setDropDownProduct] = useState('');
+  const [mercadoLivre, setMercadoLivre] = useState([])
+
+  useEffect(() => {
+    getDataFromMercadoLivre()
+    .then(setMercadoLivre)
+  }, []);
 
 
   
@@ -15,7 +22,8 @@ function Provider({ children }) {
     dropDownSource,
     setDropDownSource,
     dropDownProduct,
-    setDropDownProduct
+    setDropDownProduct,
+    mercadoLivre
   };
 
   return (

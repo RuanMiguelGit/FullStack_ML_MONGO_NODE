@@ -8,6 +8,7 @@ function Main({ Style }) {
   return (
     <div className="overlay">
       <Header Style="header" />
+
       <Footer Style="footer" />
     </div>
   );
