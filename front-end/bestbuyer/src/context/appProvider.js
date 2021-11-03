@@ -5,12 +5,17 @@ import appContext from './appContext';
 function Provider({ children }) {
   const [query, setQuery] = useState('');
   const [dropDownSource, setDropDownSource] = useState('');
+  const [dropDownProduct, setDropDownProduct] = useState('');
 
+
+  
   const contextValue = {
     query,
     setQuery,
     dropDownSource,
-    setDropDownSource
+    setDropDownSource,
+    dropDownProduct,
+    setDropDownProduct
   };
 
   return (
