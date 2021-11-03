@@ -4,20 +4,12 @@ import appContext from './appContext';
 
 function Provider({ children }) {
 
-  const [wallValueWid, setWallValueWid] = useState([])
-  const [wallValueHeig, setWallValueHeig] = useState([])
-  const [doorValue, setDoorValue] = useState([])
-  const [windowValue, setWindowValue] = useState([])
+  const [query, setQuery] = useState('')
+
 
   const contextValue = {
-    wallValueWid,
-    wallValueHeig,
-    doorValue,
-    windowValue,
-    setWallValueWid,
-    setWallValueHeig,
-    setDoorValue,
-    setWindowValue
+  query,
+  setQuery
   };
 
   return (
