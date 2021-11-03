@@ -13,7 +13,7 @@ function ProductMenu() {
       <DropDown
        value={dropDownProduct}
        change={setDropDownProduct}
-       state={mercadoLivre}
+       state={mercadoLivre.map(item => item.name)}
        selectClass='drop-down-product'
        selectedClass='drop-down-product-option'
       /> 
