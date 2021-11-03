@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 export default function Input({ type, name, value, change, inputclass }) {
   return (
     <div>
-    <input
-      type={ type }
-      placeholder={ name }
-      value={ value }
-      onChange={ (e) => change(e.target.value) }
-      className={ inputclass }
-    />
+      <input
+        type={type}
+        placeholder={name}
+        value={value}
+        onChange={(e) => change(e.target.value)}
+        className={inputclass}
+      />
     </div>
   );
 }
@@ -22,5 +22,4 @@ Input.propTypes = {
   change: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   inputclass: PropTypes.string.isRequired,
-
 };

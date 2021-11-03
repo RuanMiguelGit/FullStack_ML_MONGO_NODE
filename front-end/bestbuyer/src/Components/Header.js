@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SearchComponent from './SearchComponent';
+import SourceMenu from './SourceMenu';
 
-function Header( { Style } ) {
+function Header({ Style }) {
   return (
     <div className={ Style }>
       <SearchComponent />
+      <SourceMenu />
     </div>
   );
 }
@@ -13,5 +15,5 @@ function Header( { Style } ) {
 export default Header;
 
 Header.propTypes = {
-    Style: PropTypes.string.isRequired,
-  };
+  Style: PropTypes.string.isRequired,
+};

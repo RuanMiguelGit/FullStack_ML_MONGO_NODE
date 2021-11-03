@@ -21,8 +21,8 @@
     "lint:fix": "eslint ./src ./test --ext .js --fix",
     "test:functional": "jest --projects ./test --forceExit --runInBand",
     "test:unit": "jest",
-    "style:check": "prettier --check 'src/**/*.js' 'test/**/*.js'",
-    "style:fix": "prettier --write 'src/**/*.js' 'test/**/*.js'"
+    "style:check": "prettier --check 'src/**/*.js' ",
+    "style:fix": "prettier --write 'src/**/*.js' "
   },
   "eslintConfig": {
     "extends": [

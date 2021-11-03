@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 function Button({ Title, Style, onClick }) {
   return (
     <div>
-      <button
-      className={Style}
-      onClick={onClick}
-      >{Title}
+      <button className={Style} onClick={onClick}>
+        {Title}
       </button>
     </div>
   );
