@@ -10,6 +10,8 @@ function Provider({ children }) {
   const [mercadoLivre, setMercadoLivre] = useState([])
   const [mercadoLivreProduct, setMercadoLivreProduct] = useState([])
   const [products, setProducts] = useState([])
+  const [filtering , setFiltering] = useState(false)
+  const [filtered, setFiltered] = useState([])
 
 
   useEffect(() => {
@@ -37,7 +39,12 @@ function Provider({ children }) {
     dropDownProduct,
     setDropDownProduct,
     mercadoLivre,
-    products
+    products,
+    setProducts,
+    filtering,
+    setFiltering,
+    filtered,
+    setFiltered
   };
 
   return (
