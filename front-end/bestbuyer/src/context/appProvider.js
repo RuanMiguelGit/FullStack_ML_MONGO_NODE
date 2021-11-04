@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import appContext from './appContext';
-import  { getDataFromMercadoLivre, getProductsFromMercadoLivre } from '../Clients/mercadoLivre'
+import  { getDataFromMercadoLivre, getProductsFromMercadoLivre, FormatMercadoLivreProducts } from '../Clients/mercadoLivre'
 
 function Provider({ children }) {
   const [query, setQuery] = useState('');
   const [dropDownSource, setDropDownSource] = useState('');
   const [dropDownProduct, setDropDownProduct] = useState('');
   const [mercadoLivre, setMercadoLivre] = useState([])
-  const [product, setProduct] = useState([])
+  const [mercadoLivreProduct, setMercadoLivreProduct] = useState([])
+  const [products, setProducts] = useState([])
+
 
   useEffect(() => {
     getDataFromMercadoLivre()
@@ -17,9 +19,13 @@ function Provider({ children }) {
 
   useEffect(() => {
     getProductsFromMercadoLivre(dropDownProduct, mercadoLivre)
-    .then(setProduct)
+    .then(setMercadoLivreProduct)
   }, [dropDownProduct]);
 
+  useEffect(() => {
+    FormatMercadoLivreProducts(mercadoLivreProduct)
+    .then(setProducts)
+  }, [dropDownProduct]);
 
 
   
