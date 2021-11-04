@@ -18,7 +18,6 @@ export const getProductsFromMercadoLivre = async (productName, mercadoLivre) => 
 }
 
 
-
 export const FormatMercadoLivreProducts = async (products, category) => {
     let description = products.map(item => item.title)
     let image = products.map(item => item.thumbnail)
