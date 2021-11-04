@@ -17,14 +17,24 @@ export const getProductsFromMercadoLivre = async (productName, mercadoLivre) => 
     return  data
 }
 
-export const FormatMercadoLivreProducts = async (...args) => {
-    let description = args.map(item => item.results.map(item => item.description))
-    let products = {
-        "description":description
-    }
 
-    console.log('data', args)
-    console.log(description)
-    console.log('obj', products)
+
+export const FormatMercadoLivreProducts = async (products, category) => {
+    let description = products.map(item => item.title)
+    let image = products.map(item => item.thumbnail)
+    let price = products.map(item => item.price)
+
+    var obj = description.map((id, index) => {
+        return {
+          description: description[index],
+          image: image[index],
+          price: price[index],
+          category:category,
+          fonte:'Mercado Livre'
+        }
+      });
+      
+
+    return obj
 }
 

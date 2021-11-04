@@ -17,6 +17,9 @@ export default function DropDown({
       value={value}
       onChange={(e) => change(e.target.value)}
     >
+     <option key={''} value={''} className={selectedClass} >
+       {''}
+     </option>
       {loading ? (
         <p>Carregando</p>
       ) : (

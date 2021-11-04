@@ -19,13 +19,13 @@ function Provider({ children }) {
 
   useEffect(() => {
     getProductsFromMercadoLivre(dropDownProduct, mercadoLivre)
-    .then(setMercadoLivreProduct)
+    .then(res => setMercadoLivreProduct(res.results))
   }, [dropDownProduct]);
 
   useEffect(() => {
-    FormatMercadoLivreProducts(mercadoLivreProduct)
-    .then(setProducts)
-  }, [dropDownProduct]);
+    FormatMercadoLivreProducts(mercadoLivreProduct, dropDownProduct)
+    .then(res => setProducts(res))
+  }, [mercadoLivreProduct]);
 
 
   
@@ -36,7 +36,8 @@ function Provider({ children }) {
     setDropDownSource,
     dropDownProduct,
     setDropDownProduct,
-    mercadoLivre
+    mercadoLivre,
+    products
   };
 
   return (
