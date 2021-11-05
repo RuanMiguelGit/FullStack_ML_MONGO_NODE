@@ -38,6 +38,6 @@ export default function DropDown({
 DropDown.propTypes = {
   selectClass: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  change: PropTypes.string.isRequired,
-  state: PropTypes.func.isRequired,
+  change: PropTypes.func.isRequired,
+  state: PropTypes.array.isRequired,
 };

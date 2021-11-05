@@ -8,7 +8,7 @@ function ProductsCard() {
   return (
     <div className='products'>
       {filtering ? filtered.map(item =>  {
-          return <div className='product-holder'>
+          return <div className='product-holder' key={item.name}>
           <h3 className='product-name'> {item.description}</h3> 
           <img src={item.image} alt={item.name} className='product-picture' /> 
           <div className='product-category'> Categoria : {item.category}</div>
@@ -18,7 +18,7 @@ function ProductsCard() {
           </div>
         })
       : products.map(item =>  {
-        return <div className='product-holder'>
+        return <div className='product-holder' key={item.name}>
         <h3 className='product-name'> {item.description}</h3> 
         <img src={item.image} alt={item.name} className='product-picture' /> 
         <div className='product-category'> Categoria : {item.category}</div>
