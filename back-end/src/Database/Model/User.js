@@ -6,9 +6,18 @@ const createUser = async (name, email, password,) => {
     .then((db) =>  
       db.collection('users').insertOne({name, email, password, role:'user',}))
     .then((result) => result );
-  return data.ops[0];
+  return data;
 };
 
+const uniqueValue = async (email) => {
+    const info = await connection()
+      .then((db) => db.collection('users').findOne({ email: email }))
+      .then((result)=> result);
+    return info;   
+  };
+  
+
 module.exports = {
-    createUser
+    createUser,
+    uniqueValue
 }
