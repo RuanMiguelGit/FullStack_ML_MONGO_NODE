@@ -25,6 +25,10 @@ function Provider({ children }) {
   }, [dropDownProduct]);
 
   useEffect(() => {
+    setDropDownProduct('')
+  }, [dropDownSource])
+
+  useEffect(() => {
     FormatMercadoLivreProducts(mercadoLivreProduct, dropDownProduct, dropDownSource)
     .then(res => setProducts(res))
   }, [mercadoLivreProduct]);
