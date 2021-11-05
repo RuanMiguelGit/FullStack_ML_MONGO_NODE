@@ -9,7 +9,7 @@ const getKeyByValue = (object, value) => {
     MLU:'Mercado Livre Uruguai',
     MLA:'Mercado Livre Argentina',
     MLC:'Mercado Livre Chile',
-    MLP:'Mercado Livre Paraguai',
+    MPY:'Mercado Livre Paraguai',
 }
 
 export const getDataFromMercadoLivre = async (source) => {
@@ -28,6 +28,7 @@ export const getProductsFromMercadoLivre = async (productName, mercadoLivre, sou
     ProductId =  await mercadoLivre.find(item => item.name === productName).id
     const data = await getData(`https://api.mercadolibre.com/sites/${origin}/search?category=${ProductId}`)
     .then((res) => res )
+    console.log('ada',data)
     return  data
 }
 
@@ -37,6 +38,7 @@ export const FormatMercadoLivreProducts = async (products, category, source) => 
     let description = products.map(item => item.title)
     let image = products.map(item => item.thumbnail)
     let price = products.map(item => item.price)
+    let currency  = products.map(item => item.currency_id)
 
     var obj = description.map((id, index) => {
         return {
@@ -45,6 +47,7 @@ export const FormatMercadoLivreProducts = async (products, category, source) => 
           price: price[index],
           category:category,
           fonte:sources[origin],
+          currency:currency[index],
           style:origin
         }
       });

@@ -12,8 +12,8 @@ function ProductsCard() {
           <h3 className='product-name'> {item.description}</h3> 
           <img src={item.image} alt={item.name} className='product-picture' /> 
           <div className='product-category'> Categoria : {item.category}</div>
-          <div className='product-price'>R$ {item.price}</div>
-          <div className='product-source'>Fonte : {item.fonte}</div>
+          <div className='product-price'>$: {item.price}</div>
+          <div className={item.style}>Fonte : {item.fonte} {item.currency}</div>
           
           </div>
         })
@@ -22,7 +22,7 @@ function ProductsCard() {
         <h3 className='product-name'> {item.description}</h3> 
         <img src={item.image} alt={item.name} className='product-picture' /> 
         <div className='product-category'> Categoria : {item.category}</div>
-        <div className='product-price'>R$ {item.price}</div>
+        <div className='product-price'>{item.price} {item.currency} </div>
         <div className={item.style}>Fonte : {item.fonte}</div>
         </div>
       }) }
