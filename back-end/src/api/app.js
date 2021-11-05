@@ -5,13 +5,13 @@ const app = express();
 
 const {
   testRouter,
-
+  userRouter
 } = require('./router');
 
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use(testRouter);
-
+app.use(userRouter)
 
 module.exports = app;
