@@ -5,7 +5,7 @@ import  { getDataFromMercadoLivre, getProductsFromMercadoLivre, FormatMercadoLiv
 
 function Provider({ children }) {
   const [query, setQuery] = useState('');
-  const [dropDownSource, setDropDownSource] = useState('');
+  const [dropDownSource, setDropDownSource] = useState('Mercado Livre Brasil');
   const [dropDownProduct, setDropDownProduct] = useState('');
   const [mercadoLivre, setMercadoLivre] = useState([])
   const [mercadoLivreProduct, setMercadoLivreProduct] = useState([])
@@ -29,7 +29,7 @@ function Provider({ children }) {
     .then(res => setProducts(res))
   }, [mercadoLivreProduct]);
 
-  
+
   
   const contextValue = {
     query,
