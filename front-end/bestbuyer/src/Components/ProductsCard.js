@@ -4,7 +4,6 @@ import '../Styles/ProductCard.css';
 
 function ProductsCard() {
   const { products, filtered, filtering } = useContext(appContext)
-  const [loading, setLoading] = useState(false)
 
   return (
     <div className='products'>
@@ -24,8 +23,7 @@ function ProductsCard() {
         <img src={item.image} alt={item.name} className='product-picture' /> 
         <div className='product-category'> Categoria : {item.category}</div>
         <div className='product-price'>R$ {item.price}</div>
-        <div className='product-source'>Fonte : {item.fonte}</div>
-        
+        <div className={item.style}>Fonte : {item.fonte}</div>
         </div>
       }) }
     </div>

@@ -5,7 +5,7 @@ import Button from '../Components/Button';
 import '../Styles/SearchComponent.css';
 
 function SearchComponent() {
-  const { query, setQuery, products, setProducts, setFiltering, setFiltered } = useContext(appContext);
+  const { query, setQuery, products, setFiltering, setFiltered } = useContext(appContext);
 
 
   useEffect(() => {

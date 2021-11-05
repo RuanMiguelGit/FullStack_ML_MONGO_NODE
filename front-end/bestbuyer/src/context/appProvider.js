@@ -15,21 +15,21 @@ function Provider({ children }) {
 
 
   useEffect(() => {
-    getDataFromMercadoLivre()
+    getDataFromMercadoLivre(dropDownSource)
     .then(setMercadoLivre)
-  }, []);
+  }, [dropDownSource]);
 
   useEffect(() => {
-    getProductsFromMercadoLivre(dropDownProduct, mercadoLivre)
+    getProductsFromMercadoLivre(dropDownProduct, mercadoLivre, dropDownSource)
     .then(res => setMercadoLivreProduct(res.results))
   }, [dropDownProduct]);
 
   useEffect(() => {
-    FormatMercadoLivreProducts(mercadoLivreProduct, dropDownProduct)
+    FormatMercadoLivreProducts(mercadoLivreProduct, dropDownProduct, dropDownSource)
     .then(res => setProducts(res))
   }, [mercadoLivreProduct]);
 
-
+  
   
   const contextValue = {
     query,

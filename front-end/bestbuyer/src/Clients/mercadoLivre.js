@@ -1,24 +1,39 @@
 import { getData } from '../Service/ApiRequest'
 
-export const getDataFromMercadoLivre = async () => {
-    const data = await getData('https://api.mercadolibre.com/sites/MLB/categories')
+const getKeyByValue = (object, value) => {
+    return Object.keys(object).find(key => object[key] === value);
+  }
+
+  let sources = {
+    MLB:'Mercado Livre Brasil',
+    MLU:'Mercado Livre Uruguai',
+    MLA:'Mercado Livre Argentina',
+    MLC:'Mercado Livre Chile',
+    MLP:'Mercado Livre Paraguai',
+}
+
+export const getDataFromMercadoLivre = async (source) => {
+    const origin = getKeyByValue(sources, source)
+    const data = await getData(`https://api.mercadolibre.com/sites/${origin}/categories`)
     .then((res) => res.map(item => {
         return item
     }))
     return  data
 }
 
-export const getProductsFromMercadoLivre = async (productName, mercadoLivre) => {
+export const getProductsFromMercadoLivre = async (productName, mercadoLivre, source) => {
+    const origin = getKeyByValue(sources, source)
     let ProductId =''
     productName === '' ? ProductId = '':
     ProductId =  await mercadoLivre.find(item => item.name === productName).id
-    const data = await getData(`https://api.mercadolibre.com/sites/MLB/search?category=${ProductId}`)
+    const data = await getData(`https://api.mercadolibre.com/sites/${origin}/search?category=${ProductId}`)
     .then((res) => res )
     return  data
 }
 
 
-export const FormatMercadoLivreProducts = async (products, category) => {
+export const FormatMercadoLivreProducts = async (products, category, source) => {
+    const origin = getKeyByValue(sources, source)
     let description = products.map(item => item.title)
     let image = products.map(item => item.thumbnail)
     let price = products.map(item => item.price)
@@ -29,7 +44,8 @@ export const FormatMercadoLivreProducts = async (products, category) => {
           image: image[index],
           price: price[index],
           category:category,
-          fonte:'Mercado Livre'
+          fonte:sources[origin],
+          style:origin
         }
       });
       
