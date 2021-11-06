@@ -16,8 +16,14 @@ const uniqueValue = async (email) => {
     return info;   
   };
   
-
+const getAllusers = async () => {
+  const data = await connection()
+  .then((db) => db.collection('users').find({}).toArray())
+  .then((res) => res)
+  return data
+}
 module.exports = {
     createUser,
-    uniqueValue
+    uniqueValue,
+    getAllusers
 }

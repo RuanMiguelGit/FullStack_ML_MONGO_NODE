@@ -10,6 +10,11 @@ const createUser = async  (name, email, password) => {
     return { data }; 
   };
 
+  const getAllusers = async () => {
+    const users = await UserModel.getAllusers()
+    return users
+  }
   module.exports = {
-    createUser
+    createUser,
+    getAllusers
 }
