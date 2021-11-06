@@ -1,5 +1,6 @@
 const UserModel = require('../Database/Model/User');
 const UserSchema = require('../Schemas/UserValidator');
+const LoginSchema = require('../Schemas/LoginValidator')
 
 const createUser = async  (name, email, password) => {
     const validate =  UserSchema.validate(name, email, password);
@@ -14,7 +15,16 @@ const createUser = async  (name, email, password) => {
     const users = await UserModel.getAllusers()
     return users
   }
+
+  const login =  async (email, password) => {
+    const {message, token, role} = await LoginSchema.validateUser(email, password);
+    if(message) return {message};
+     
+    return {token, role};
+  };
+  
   module.exports = {
     createUser,
-    getAllusers
+    getAllusers,
+    login
 }

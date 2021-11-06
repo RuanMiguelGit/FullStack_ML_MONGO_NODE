@@ -5,7 +5,9 @@ const app = express();
 
 const {
   testRouter,
-  userRouter
+  userRouter,
+  trackerRouter
+
 } = require('./router');
 
 app.use(bodyParser.json());
@@ -13,5 +15,6 @@ app.use(cors());
 
 app.use(testRouter);
 app.use(userRouter)
+app.use(trackerRouter)
 
 module.exports = app;

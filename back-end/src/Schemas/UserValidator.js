@@ -29,7 +29,7 @@ const validate = (name, email, password) => {
 const validateEmail = async (email) => {
   const validate = await  UserModel.uniqueValue(email);
   if (validate !==null ) return {
-    message:'Email already registered',
+    message:'Email já registrado',
     code:409
 
   };
