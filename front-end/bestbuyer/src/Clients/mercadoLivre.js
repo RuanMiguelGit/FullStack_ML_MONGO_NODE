@@ -28,6 +28,7 @@ export const getProductsFromMercadoLivre = async (productName, mercadoLivre, sou
     ProductId =  await mercadoLivre.find(item => item.name === productName).id
     const data = await getData(`https://api.mercadolibre.com/sites/${origin}/search?category=${ProductId}`)
     .then((res) => res )
+    console.log(data)
     return  data
 }
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import Provider from './context/appProvider';
-import Main from './Pages/Main';
+import PageRoutes from './Routes/index';
 import './Styles/Main.css';
 
 function App() {
   return (
     <div className="overlay">
       <Provider>
-        <Main />
+        <PageRoutes />
       </Provider>
     </div>
   );

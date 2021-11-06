@@ -12,16 +12,20 @@ function Provider({ children }) {
   const [products, setProducts] = useState([])
   const [filtering , setFiltering] = useState(false)
   const [filtered, setFiltered] = useState([])
-
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     getDataFromMercadoLivre(dropDownSource)
     .then(setMercadoLivre)
+    setLoading(false)
   }, [dropDownSource]);
 
   useEffect(() => {
+    setLoading(true)
     getProductsFromMercadoLivre(dropDownProduct, mercadoLivre, dropDownSource)
     .then(res => setMercadoLivreProduct(res.results))
+    setLoading(false)
   }, [dropDownProduct]);
 
   useEffect(() => {
@@ -29,8 +33,10 @@ function Provider({ children }) {
   }, [dropDownSource])
 
   useEffect(() => {
+    setLoading(true)
     FormatMercadoLivreProducts(mercadoLivreProduct, dropDownProduct, dropDownSource)
     .then(res => setProducts(res))
+    setLoading(false)
   }, [mercadoLivreProduct]);
 
 
@@ -48,7 +54,8 @@ function Provider({ children }) {
     filtering,
     setFiltering,
     filtered,
-    setFiltered
+    setFiltered,
+    loading
   };
 
   return (

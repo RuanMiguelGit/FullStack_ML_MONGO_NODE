@@ -14,7 +14,6 @@ function ProductsCard() {
           <div className='product-category'> Categoria : {item.category}</div>
           <div className='product-price'>$: {item.price}</div>
           <div className={item.style}>Fonte : {item.fonte} {item.currency}</div>
-          
           </div>
         })
       : products.map(item =>  {
