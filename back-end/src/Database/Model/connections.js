@@ -5,15 +5,17 @@ const OPTIONS = {
   useUnifiedTopology: true,
 };
 
+const MONGO_DB_URL = 'mongodb+srv://ruanmiguel:5665123456@cluster0.2e792.mongodb.net/BestBuyers?retryWrites=true&w=majority'
+const DB_NAME = process.env.DB_NAME
 
 let db = null;
 
 const connection = () => {
   return db
     ? Promise.resolve(db)
-    : MongoClient.connect(process.env.MONGO_DB_URL, OPTIONS)
+    : MongoClient.connect(MONGO_DB_URL, OPTIONS)
       .then((conn) => {
-        db = conn.db(process.env.DB_NAME);
+        db = conn.db(DB_NAME);
         return db;
       });
 };
