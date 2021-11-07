@@ -7,7 +7,7 @@ import Logout from './Logout';
 
 function Header({ Style }) {
   return (
-    <div className={ Style }>
+    <div className={Style}>
       <SearchComponent />
       <Logout />
       <SourceMenu />

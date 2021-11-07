@@ -4,8 +4,8 @@ import '../Styles/Login.css';
 
 function Login() {
   return (
-    <div className='cover'>
-    <LoginComponent/>
+    <div className="cover">
+      <LoginComponent />
     </div>
   );
 }

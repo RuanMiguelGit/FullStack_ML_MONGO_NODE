@@ -4,7 +4,7 @@ import LoginCard from './LoginCard';
 function LoginComponent() {
   return (
     <div>
-        <LoginCard/>
+      <LoginCard />
     </div>
   );
 }

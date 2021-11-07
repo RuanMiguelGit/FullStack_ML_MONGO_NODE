@@ -5,12 +5,11 @@ const axiosConfig = {
     'Content-Type': 'application/json;charset=UTF-8',
     'Access-Control-Allow-Origin': '*',
     Accept: 'application/json',
-    // authorization: getUserToken(),
-
   },
 };
 export const getData = async (url) => {
-  const products = await axios.get(url, axiosConfig)
+  const products = await axios
+    .get(url, axiosConfig)
     .then((res) => res.data)
     .then((data) => data)
     .catch((err) => {

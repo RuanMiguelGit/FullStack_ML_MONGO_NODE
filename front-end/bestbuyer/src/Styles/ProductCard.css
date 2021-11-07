@@ -1,9 +1,7 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    
 }
-
 
 .product-holder {
     background-color: rgb(255, 255, 255);
@@ -11,8 +9,6 @@
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
     color: black;
     display: grid;
-    /* flex: 1 0 21%;  */
- 
     filter: drop-shadow(5px 5px 6px black);
     font-family: Helvetica , Arial , Verdana , Tahoma , sans-serif;
     height: 350px;
@@ -115,4 +111,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .btn-visit {
+    background-color: #001f33; 
+    border: none;
+    border-radius: 2%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(221, 219, 219);
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    height: 8%;
+    padding: 10px 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 35%;
+    text-align: center;
+    text-decoration: none;
+    width: 28%;
   }

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,29 +6,28 @@ export default function DropDown({
   value,
   change,
   state,
-  selectedClass
+  selectedClass,
 }) {
   const [loading] = useState(false);
 
   return (
     <select
-      className={ selectClass }
+      className={selectClass}
       value={value}
       onChange={(e) => change(e.target.value)}
     >
-     <option key={''} value={''} className={selectedClass} >
-       {''}
-     </option>
+      <option key={''} value={''} className={selectedClass}>
+        {''}
+      </option>
       {loading ? (
-        <p>Carregando</p>
+        <Loading />
       ) : (
-        state
-          .map((item) => (
-            <option key={item} value={item} className={selectedClass} >
-              {' '}
-              {item}{' '}
-            </option>
-          ))
+        state.map((item) => (
+          <option key={item} value={item} className={selectedClass}>
+            {' '}
+            {item}{' '}
+          </option>
+        ))
       )}
     </select>
   );
@@ -40,4 +38,5 @@ DropDown.propTypes = {
   value: PropTypes.string.isRequired,
   change: PropTypes.func.isRequired,
   state: PropTypes.array.isRequired,
+  selectedClass:PropTypes.string.isRequired
 };

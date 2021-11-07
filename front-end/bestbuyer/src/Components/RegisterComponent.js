@@ -4,7 +4,7 @@ import RegisterCard from './RegisterCard';
 function RegisterComponent() {
   return (
     <div>
-      <RegisterCard/>
+      <RegisterCard />
     </div>
   );
 }
