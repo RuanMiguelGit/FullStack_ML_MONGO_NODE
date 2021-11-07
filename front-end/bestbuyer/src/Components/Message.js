@@ -1,8 +1,8 @@
 import React from 'react';
-import Loading from './Loading';
 import PropTypes from 'prop-types';
 
-function Message({ registrationError }) {
+function Message({ registrationError, loading }) {
+  if(loading) return <p className='charging'>....Carregando</p>
   return (
     <div>
       {''}
@@ -18,5 +18,6 @@ function Message({ registrationError }) {
 export default Message;
 
 Message.propTypes = {
-  registrationError: PropTypes.string.isRequired,
+  registrationError: PropTypes.array.isRequired,
+  loading:PropTypes.bool.isRequired
 };

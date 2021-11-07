@@ -12,15 +12,15 @@ function LoginCard() {
   const [password, setPassword] = useState('');
   const [loginInfo, setLoginInfo] = useState([]);
   const [loginError, setLoginError] = useState([]);
+  const [loading, setLoading] = useState(false)
   const history = useHistory();
 
-  const { loading, setLoading } = useContext(appContext)
 
   const data = {
     email: email,
     password: password,
   };
-  const url = 'http://localhost:3003/login';
+  const url = 'https://api-lsbuy.herokuapp.com/login';
 
   const login = async (url, data) => {
     setLoading(true);
@@ -77,7 +77,7 @@ function LoginCard() {
         onClick={() => history.push('/register')}
         Style="btn-register-login"
       />
-      <Message registrationError={loginError}  />
+      <Message registrationError={loginError} loading={loading} />
     </div>
   );
 }

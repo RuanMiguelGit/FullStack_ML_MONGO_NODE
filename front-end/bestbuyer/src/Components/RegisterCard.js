@@ -21,7 +21,7 @@ function RegisterCard() {
     email: emailRegister,
     password: passwordRegister,
   };
-  const url = 'http://localhost:3003/user';
+  const url = 'https://api-lsbuy.herokuapp.com/user';
 
   useEffect(() => {
     if (userInfo.length !== 0) return history.push('/');
@@ -32,11 +32,9 @@ function RegisterCard() {
     await sendaData(url, data)
       .then((res) => {
         setUserInfo(res.data);
-        console.log('adas', userInfo);
       })
       .catch((error) => {
         setRegisterError(error.response.data);
-        console.log('adasdasd', registrationError.message);
       });
     setLoading(false);
     clearUp();

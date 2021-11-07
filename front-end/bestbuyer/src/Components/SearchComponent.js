@@ -15,7 +15,7 @@ function SearchComponent() {
     email: getUserEmail(),
     searchItem: query,
   };
-  const url = 'http://localhost:3003/tracker';
+  const url = 'https://api-lsbuy.herokuapp.com/tracker';
 
   const trackCategories = async () => {
     await sendaData(url, data);

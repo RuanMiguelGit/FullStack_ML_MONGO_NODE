@@ -6,7 +6,6 @@ import '../Styles/ProductCard.css';
 
 function ProductsCard() {
   const { products, filtered, filtering, loading } = useContext(appContext);
-  console.log(loading)
   if(loading) return <Loading />
   return (
     <div className="products">
