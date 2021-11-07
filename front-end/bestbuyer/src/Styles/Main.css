@@ -1,7 +1,11 @@
+body {
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+}
 
 .overlay{
     background-color:rgba(235, 235, 235, 0.979);
-    /* position:fixed; */
     width:100%;
     height:100%;
     top:0px;
@@ -47,6 +51,7 @@
     padding: 25px 9px;
     text-align: center;
     width: 99.2%;
+    clear:both
 }
 
 .main-card {
