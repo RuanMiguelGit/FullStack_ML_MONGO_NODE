@@ -4,7 +4,7 @@ const validate = (name, email, password) => {
   const emailValidator =
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if(!name || name === null) return {
-    message:'Invalid entries. Try again.',
+    message:'Dados inválidos, Tente novamente.',
     code:400
   };
 
@@ -12,13 +12,13 @@ const validate = (name, email, password) => {
   if(!email || email === null || !emailValidator.test(email))
 
     return {
-      message:'Invalid entries. Try again.',
+      message:'Dados inválidos, Tente novamente.',
       code:400,
 
     };
 
   if(!password) return {
-    message:'Invalid entries. Try again.',
+    message:'Dados inválidos, Tente novamente.',
     code:400
 
   };

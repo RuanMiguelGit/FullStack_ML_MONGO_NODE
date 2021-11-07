@@ -16,7 +16,15 @@ const registerUsage = async (name, email, searchItem,) => {
     return info;   
   };
 
+  const getAllTrackedInfo = async () => {
+    const data = await connection()
+    .then((db) => db.collection('userTracker').find({}).toArray())
+    .then((res) => res)
+    return data
+  }
+
 module.exports = {
     registerUsage,
-    uniqueTrackedValue
+    uniqueTrackedValue,
+    getAllTrackedInfo
 }

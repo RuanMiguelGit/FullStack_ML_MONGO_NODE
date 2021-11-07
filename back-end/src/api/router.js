@@ -15,6 +15,7 @@ userRouter.post('/user', userController.createUser)
 userRouter.get('/user', userController.getAllusers)
 userRouter.post('/login', userController.login)
 
+trackerRouter.get('/tracker', trackerController.getAllTrackedInfo)
 trackerRouter.post('/tracker', trackerController.registerUsage)
 
 module.exports = {

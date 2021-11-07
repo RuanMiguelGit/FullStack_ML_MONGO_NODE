@@ -8,7 +8,12 @@ const registerUsage = async  (name, email, searchItem) => {
     return { data }; 
   };
 
+  const getAllTrackedInfo = async () => {
+    const info = await TrackerModel.getAllTrackedInfo()
+    return info
+  }
   
 module.exports = {
-    registerUsage
+    registerUsage,
+    getAllTrackedInfo
 }
