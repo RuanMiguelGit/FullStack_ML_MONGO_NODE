@@ -17,10 +17,10 @@ const createUser = async  (name, email, password) => {
   }
 
   const login =  async (email, password) => {
-    const {message, token, role} = await LoginSchema.validateUser(email, password);
+    const {message, token, role, name} = await LoginSchema.validateUser(email, password);
     if(message) return {message};
      
-    return {token, role};
+    return {token, role, name};
   };
   
   module.exports = {

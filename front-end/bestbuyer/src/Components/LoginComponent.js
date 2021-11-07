@@ -5,7 +5,6 @@ function LoginComponent() {
   return (
     <div>
         <LoginCard/>
-
     </div>
   );
 }

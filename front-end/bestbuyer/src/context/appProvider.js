@@ -14,6 +14,9 @@ function Provider({ children }) {
   const [filtered, setFiltered] = useState([])
   const [loading, setLoading] = useState(false)
 
+  
+  
+
   useEffect(() => {
     setLoading(true)
     getDataFromMercadoLivre(dropDownSource)
@@ -55,7 +58,7 @@ function Provider({ children }) {
     setFiltering,
     filtered,
     setFiltered,
-    loading
+    loading,
   };
 
   return (

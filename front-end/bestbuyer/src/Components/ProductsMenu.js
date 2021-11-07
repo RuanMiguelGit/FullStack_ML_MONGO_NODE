@@ -6,8 +6,6 @@ import '../Styles/DropDownProduct.css';
 function ProductMenu() {
     const { dropDownProduct, setDropDownProduct, mercadoLivre } = useContext(appContext)
 
-    // const [product, setProduct] = useState(['products1', 'product2', 'product3'])
-
   return (
     <div>
       <DropDown

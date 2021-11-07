@@ -17,11 +17,11 @@ const validateUser  = async (email, password) => {
     expiresIn: '7d',
     algorithm: 'HS256',
   };
-  const {_id, role} = user;
+  const {_id, role, name} = user;
 
 
   const token = jwt.sign({ data: _id, email, role }, secret, jwtConfig);
-  return { token , role};
+  return { token , role, name};
     
 };
 

@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { sendaData } from '../Service/ApiRequest';
+import { useHistory } from 'react-router-dom';
+import Message from './Message';
 import Input from './Input';
 import Button from './Button';
 
@@ -6,6 +9,50 @@ function RegisterCard() {
     const [nameRegister, setNameRegister] = useState('')
     const [emailRegister, setEmailRegister] = useState('')
     const [passwordRegister, setPasswordRegister] = useState('')
+    const [userInfo, setUserInfo] = useState([])
+    const [registrationError, setRegisterError] = useState([])
+    const [loading, setLoading] = useState(false)
+    const history = useHistory();
+
+    const data = {
+        name: nameRegister,
+        email: emailRegister,
+        password:passwordRegister
+    }
+    const url = 'http://localhost:3003/user'
+
+    useEffect(() => {
+        if (userInfo.length !== 0) return history.push('/');
+      }, [userInfo]);
+
+    const registration = async (url, data) => {
+        setLoading(true);
+        await sendaData(url, data)
+          .then((res) => {
+              setUserInfo(res.data);
+              console.log('adas', userInfo)
+          })
+          .catch((error) => {
+              setRegisterError(error.response.data);
+              console.log('adasdasd', registrationError.message)
+          });
+        setLoading(false);
+        clearUp()
+      };
+    
+      const clearUp = () => {
+          setNameRegister('')
+          setEmailRegister('')
+          setPasswordRegister('')
+      }
+
+      useEffect(() => {
+        if(registrationError.length > 0) {
+            setRegisterError([]);
+        }
+      }, [nameRegister, emailRegister]);
+    
+
 
   return (
     <div className='main-card-register'>
@@ -24,18 +71,21 @@ function RegisterCard() {
             inputclass='input-register'
         />
          <Input
-            type='input'
+            type='password'
             name='Senha'
             value={passwordRegister}
             change={setPasswordRegister}
             inputclass='input-register'
         />
         <Button
-           Title='Registrar'
-          onClick={() => console.log('ou')}
-          Style='btn-register'
+            Title='Registrar'
+            onClick={() => registration(url, data)}
+            Style='btn-register'
         />
-    
+        <Message
+        registrationError={registrationError}
+        loading={loading}
+        />
     </div>
   );
 }

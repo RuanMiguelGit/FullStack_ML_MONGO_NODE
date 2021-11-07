@@ -53,3 +53,10 @@
     text-decoration: none;
     width: 25%;
   }
+
+  .message {
+    background-color: rgb(255, 255, 255);
+    color:#ee4343;
+    font-weight: normal;
+    text-align: center;
+  }

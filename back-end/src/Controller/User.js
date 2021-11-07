@@ -14,9 +14,9 @@ const createUser =  async (req, res) => {
 
   const login =  async (req, res) => {
     const { email, password} = req.body;
-    const { message, token, role } = await UserService.login(email, password);
-    if(message) return res.status(notAuth).json({message:message});
-    return res.status(200).json({token, role});
+    const { message, token, role, name } = await UserService.login(email, password);
+    if(message) return res.status(401).json({message:message});
+    return res.status(200).json({token, role, name, email});
   };
 
   

@@ -13,7 +13,7 @@ testRouter.get('/', testController.test);
 
 userRouter.post('/user', userController.createUser)
 userRouter.get('/user', userController.getAllusers)
-userRouter.get('/login', userController.login)
+userRouter.post('/login', userController.login)
 
 trackerRouter.post('/tracker', trackerController.registerUsage)
 

@@ -19,3 +19,9 @@ export const getData = async (url) => {
 
   return products;
 };
+
+export const sendaData = async (url, data) => {
+  const response = await axios.post(url, data, axiosConfig);
+
+  return response;
+};
