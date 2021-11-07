@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { sendaData } from '../Service/ApiRequest';
 import { useHistory } from 'react-router-dom';
 import Message from './Message';
 import Input from './Input';
 import Button from './Button';
+import appContext from '../context/appContext';
 
 function RegisterCard() {
   const [nameRegister, setNameRegister] = useState('');
@@ -11,8 +12,9 @@ function RegisterCard() {
   const [passwordRegister, setPasswordRegister] = useState('');
   const [userInfo, setUserInfo] = useState([]);
   const [registrationError, setRegisterError] = useState([]);
-  const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  const { loading, setLoading } = useContext(appContext)
 
   const data = {
     name: nameRegister,
@@ -80,7 +82,7 @@ function RegisterCard() {
         onClick={() => registration(url, data)}
         Style="btn-register"
       />
-      <Message registrationError={registrationError} loading={loading} />
+      <Message registrationError={registrationError} />
     </div>
   );
 }

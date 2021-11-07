@@ -7,7 +7,7 @@ function ProductsTemplate({ state }) {
     <div className="products">
       {state.map((item) => {
         return (
-          <div className="product-holder" key={item.name}>
+          <div className="product-holder" key={item.permalink}>
             <h3 className="product-name"> {item.description}</h3>
             <a href={item.permalink}>
               <img
@@ -29,7 +29,7 @@ function ProductsTemplate({ state }) {
 }
 
 ProductsTemplate.propTypes = {
-  state: PropTypes.func.isRequired,
+  state: PropTypes.array.isRequired,
 };
 
 export default ProductsTemplate;

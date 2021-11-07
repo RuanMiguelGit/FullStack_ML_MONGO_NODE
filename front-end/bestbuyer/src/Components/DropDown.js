@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import Loading from './Loading';
+import appContext from '../context/appContext';
 
 export default function DropDown({
   selectClass,
@@ -8,8 +10,9 @@ export default function DropDown({
   state,
   selectedClass,
 }) {
-  const [loading] = useState(false);
 
+  const { loading } = useContext(appContext)
+  
   return (
     <select
       className={selectClass}

@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { sendaData } from '../Service/ApiRequest';
 import { saveUserInLocalStorage } from '../Service/LocalStorage';
 import { useHistory } from 'react-router-dom';
 import Message from './Message';
 import Input from './Input';
 import Button from './Button';
+import appContext from '../context/appContext';
 
 function LoginCard() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginInfo, setLoginInfo] = useState([]);
   const [loginError, setLoginError] = useState([]);
-  const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  const { loading, setLoading } = useContext(appContext)
 
   const data = {
     email: email,
@@ -75,7 +77,7 @@ function LoginCard() {
         onClick={() => history.push('/register')}
         Style="btn-register-login"
       />
-      <Message registrationError={loginError} loading={loading} />
+      <Message registrationError={loginError}  />
     </div>
   );
 }

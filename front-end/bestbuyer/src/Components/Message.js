@@ -2,8 +2,7 @@ import React from 'react';
 import Loading from './Loading';
 import PropTypes from 'prop-types';
 
-function Message({ registrationError, loading }) {
-  if (loading) return <Loading />;
+function Message({ registrationError }) {
   return (
     <div>
       {''}
@@ -20,5 +19,4 @@ export default Message;
 
 Message.propTypes = {
   registrationError: PropTypes.string.isRequired,
-  loading: PropTypes.string.isRequired,
 };
