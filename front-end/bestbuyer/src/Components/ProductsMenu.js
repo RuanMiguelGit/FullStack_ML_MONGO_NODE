@@ -1,10 +1,28 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { getUserEmail, getUserName } from '../Service/LocalStorage'
+import { sendaData } from '../Service/ApiRequest'
 import appContext from '../context/appContext';
 import DropDown from './DropDown';
 import '../Styles/DropDownProduct.css';
 
 function ProductMenu() {
     const { dropDownProduct, setDropDownProduct, mercadoLivre } = useContext(appContext)
+
+    const data = {
+      name: getUserName(),
+      email: getUserEmail(),
+      searchItem: dropDownProduct
+    }
+    const url = 'http://localhost:3003/tracker'
+
+    const trackCategories = async () => {
+      await sendaData(url, data)
+    }
+    
+    useEffect(() => {
+      trackCategories()
+    }, [dropDownProduct]); 
+
 
   return (
     <div>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import appContext from './appContext';
 import  { getDataFromMercadoLivre, getProductsFromMercadoLivre, FormatMercadoLivreProducts } from '../Clients/mercadoLivre'
 
+
 function Provider({ children }) {
   const [query, setQuery] = useState('');
   const [dropDownSource, setDropDownSource] = useState('Mercado Livre Brasil');
@@ -15,8 +16,6 @@ function Provider({ children }) {
   const [loading, setLoading] = useState(false)
 
   
-  
-
   useEffect(() => {
     setLoading(true)
     getDataFromMercadoLivre(dropDownSource)
@@ -43,7 +42,7 @@ function Provider({ children }) {
   }, [mercadoLivreProduct]);
 
 
-  
+
   const contextValue = {
     query,
     setQuery,

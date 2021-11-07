@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+import { getUserEmail, getUserName } from '../Service/LocalStorage'
+import { sendaData } from '../Service/ApiRequest'
 import appContext from '../context/appContext';
 import Input from '../Components/Input';
 import Button from '../Components/Button';
@@ -7,6 +9,16 @@ import '../Styles/SearchComponent.css';
 function SearchComponent() {
   const { query, setQuery, products, setFiltering, setFiltered } = useContext(appContext);
 
+  const data = {
+    name: getUserName(),
+    email: getUserEmail(),
+    searchItem: query
+  }
+  const url = 'http://localhost:3003/tracker'
+
+  const trackCategories = async () => {
+    await sendaData(url, data)
+  }
 
   useEffect(() => {
     if(query ===''){
@@ -16,12 +28,14 @@ function SearchComponent() {
 
   const findProducts = () => {
     let filter = ''
+    trackCategories()
+    
     if(query !=='') {
       filter = products.filter(item =>
-        (item.description[0].toUpperCase() + item.description.slice(1).toLowerCase()).includes(query))
+        (item.description.toLowerCase()).includes(query.toLowerCase()))
         setFiltered(filter)
         setFiltering(true)
-    }    
+      }    
     
     }
 

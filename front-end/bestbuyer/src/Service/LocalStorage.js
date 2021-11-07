@@ -20,3 +20,8 @@ export const clearUserInLocalStorage = async () => {
     return 'everything clean';
   };
   
+export const getUserEmail = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user && user.email) return user.email;
+    return '';
+  };
