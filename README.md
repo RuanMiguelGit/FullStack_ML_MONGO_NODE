@@ -3,11 +3,11 @@
 # Boas vindas ao repositório do projeto de App de Melhor preço - FullStack in Cloud
 
 <img src="https://media.giphy.com/media/t7Rm0HO2QWr8VrWRVR/giphy.gif" />  
-<img src="https://media.giphy.com/media/0lHC6XqX4Vokt58yJC/giphy.gif" />  
-<img src="https://media.giphy.com/media/t7Rm0HO2QWr8VrWRVR/giphy.gif" />  
+<img src="https://media.giphy.com/media/KZk7SpoQB42UVi9zBu/giphy.gif" />  
+<img src="https://media.giphy.com/media/jVK7hqFEn2GKEyPA7N/giphy.gif" />  
 
 # Acesse a Aplicação
-<a href="https://react-lsbuy.herokuapp.com/"><h3> App de Receitas</h3> </a>
+<a href="https://react-lsbuy.herokuapp.com/"><h3> App de Melhor preço - FullStack in Cloud</h3> </a>
 
 # Sobre a Aplicação
 <li> Essa é uma aplicação Fullstack feita com React, Node.js, MongoDB</li>
@@ -117,8 +117,6 @@ dar dinamicidade para a aplicação</p>
     <li> Adicione um arquivo .env com os dados PORT, MONGO_DB_URL, DB_NAME</li>
    <li> Npm start no Front-end</li>
     <li> Npm start no Back-end</li>
- </ul>
- </ol>
 
 # Membros do Projeto
 <ul>
