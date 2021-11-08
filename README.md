@@ -3,7 +3,7 @@
 # Boas vindas ao repositório do projeto de App de Melhor preço - FullStack in Cloud
 
 <img src="https://media.giphy.com/media/t7Rm0HO2QWr8VrWRVR/giphy.gif" />  
-<img src="https://media.giphy.com/media/0lHC6XqX4Vokt58yJC/giphy.gif" />  
+<img src="https://media.giphy.com/media/KZk7SpoQB42UVi9zBu/giphy.gif" />  
 <img src="https://media.giphy.com/media/jVK7hqFEn2GKEyPA7N/giphy.gif" />  
 
 # Acesse a Aplicação
