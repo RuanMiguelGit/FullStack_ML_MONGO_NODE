@@ -4,7 +4,7 @@
 
 <img src="https://media.giphy.com/media/t7Rm0HO2QWr8VrWRVR/giphy.gif" />  
 <img src="https://media.giphy.com/media/0lHC6XqX4Vokt58yJC/giphy.gif" />  
-<img src="https://media.giphy.com/media/t7Rm0HO2QWr8VrWRVR/giphy.gif" />  
+<img src="https://media.giphy.com/media/jVK7hqFEn2GKEyPA7N/giphy.gif" />  
 
 # Acesse a Aplicação
 <a href="https://react-lsbuy.herokuapp.com/"><h3> App de Melhor preço - FullStack in Cloud</h3> </a>
