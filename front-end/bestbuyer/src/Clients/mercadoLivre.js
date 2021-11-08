@@ -38,7 +38,6 @@ export const getProductsFromMercadoLivre = async (
   const data = await getData(
     `https://api.mercadolibre.com/sites/${origin}/search?category=${ProductId}`
   ).then((res) => res);
-  console.log(data);
   return data;
 };
 
