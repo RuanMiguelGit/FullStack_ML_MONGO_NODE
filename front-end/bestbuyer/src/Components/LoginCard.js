@@ -61,7 +61,7 @@ function LoginCard() {
         inputclass="input-login"
       />
       <Input
-        type="input"
+        type="password"
         name="Senha"
         value={password}
         change={setPassword}

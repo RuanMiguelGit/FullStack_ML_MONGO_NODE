@@ -6,7 +6,7 @@ import '../Styles/DropDownSource.css';
 function SourceMenu() {
   const { dropDownSource, setDropDownSource } = useContext(appContext);
 
-  const [source, setSource] = useState([
+  const [source] = useState([
     'Mercado Livre Brasil',
     'Mercado Livre Uruguai',
     'Mercado Livre Argentina',
