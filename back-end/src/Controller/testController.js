@@ -1,6 +1,6 @@
 const test = async (req, res) => {
     
-    return res.status(200).json({message:'funfo'});
+    return res.status(200).json({message:'Api Online'});
   };
 
 

@@ -1,0 +1,131 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-holder {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+    color: black;
+    display: grid;
+    filter: drop-shadow(5px 5px 6px black);
+    font-family: Helvetica , Arial , Verdana , Tahoma , sans-serif;
+    height: 350px;
+    margin: 2%;
+    width: 350px;
+
+}
+
+.product-name {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: bold;
+  }
+
+  .product-price {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: bold;
+  }
+
+  .product-picture {
+    filter: drop-shadow(2px 2px 6px black);
+    height: 150px;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-category {
+    background-color: white;
+    color: rgb(185, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    font-weight:  bold;
+  }
+
+
+  .MLB {
+    background-color: rgb(218, 204, 10);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    font-weight:  bold;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .MLU {
+    background-color: #135dbe;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    font-weight:  bold;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .MLA {
+    background-color: #2adfffc7;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    font-weight:  bold;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .MLC {
+    background-color: #ee1000c7;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    font-weight:  bold;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .MPY {
+    background-color: #d6493fc7;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    font-weight:  bold;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-visit {
+    background-color: #001f33; 
+    border: none;
+    border-radius: 2%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(221, 219, 219);
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    height: 8%;
+    padding: 10px 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 35%;
+    text-align: center;
+    text-decoration: none;
+    width: 28%;
+  }
