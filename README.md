@@ -117,8 +117,6 @@ dar dinamicidade para a aplicação</p>
     <li> Adicione um arquivo .env com os dados PORT, MONGO_DB_URL, DB_NAME</li>
    <li> Npm start no Front-end</li>
     <li> Npm start no Back-end</li>
- </ul>
- </ol>
 
 # Membros do Projeto
 <ul>
