@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { getUserEmail, getUserName } from '../Service/LocalStorage';
 import { sendaData } from '../Service/ApiRequest';
 import appContext from '../context/appContext';
@@ -7,7 +7,8 @@ import Button from '../Components/Button';
 import '../Styles/SearchComponent.css';
 
 function SearchComponent() {
-  const { query, setQuery, products, setFiltering, setFiltered } =
+  const [query, setQuery] = useState('')
+  const { products, setFiltering, setFiltered } =
     useContext(appContext);
 
   const data = {

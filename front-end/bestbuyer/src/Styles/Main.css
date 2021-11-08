@@ -66,18 +66,7 @@ body {
 
 }
 
-.wall-holder {
-  background-color: rgb(41, 37, 37);
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  color:white;
-  display: inline-block;
-  margin-left: 10%;
-  margin-top: 2%;
-  flex-direction: row;
-  width: 35%;
-  height: 38%;
-}
+
 
 
 .btn {
