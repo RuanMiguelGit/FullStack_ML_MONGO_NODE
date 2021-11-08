@@ -83,38 +83,45 @@ dar dinamicidade para a aplicação</p>
 
 <h3> Mobile </h3>
   <p> Essa aplicação não é Mobile Friendily tendo essa feature em desenvolvimento</p>
-  
-
+ 
   
 # Tecnologias Utilizadas
 <p align="center">
  <div style="background-color:black">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" style="max-width:100%;" width="40" height="40">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" style="max-width:100%;" width="40" height="40">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" style="max-width:100%;" width="40" height="40">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" style="max-width:100%;" width="40" height="40">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" style="max-width:100%;" width="40" height="40">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
-<img src="https://cdn-media-1.freecodecamp.org/images/1*FDNeKIUeUnf0XdqHmi7nsw.png" alt="git" style="max-width:100%;" width="40" height="40">
-
-
+<div>
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="html5" style="max-width:100%;" >
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5" style="max-width:100%;">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="html5" style="max-width:100%;">
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="html5" style="max-width:100%;"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="html5" style="max-width:100%;"/>
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="html5" style="max-width:100%;"/>
+</div>
+<div>
+ <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="html5" style="max-width:100%;" />
+ </div>
+ <div>
+<img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="html5" style="max-width:100%;" />
+<img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" style="max-width:100%;"/>
+<img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="html5" style="max-width:100%;" />
+<img src="https://img.shields.io/badge/Insomnia-5849be?style=for-the-badge&logo=Insomnia&logoColor=white" alt="html5" style="max-width:100%;" />
+ <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white" alt="html5" style="max-width:100%;" />
+ <img src="https://img.shields.io/badge/Heroku-000000?style=for-the-badge&logo=herokulogoColor=white" alt="html5" style="max-width:100%;" />
 </p>
 </div>
-# Como Rodar o projeto
+# Como Rodar o projeto Localmente
 <ol>
   <ul>
   <li> Git Clone no Projeto</li>
-  <li> Npm Install</li>
-  <li> Npm start</li>
+  <li> Npm Install no Front-end</li>
+   <li> Npm install No Back-end</li>
+    <li> Adicione um arquivo .env com os dados PORT, MONGO_DB_URL, DB_NAME</li>
+   <li> Npm start no Front-end</li>
+    <li> Npm start no Back-end</li>
  </ul>
  </ol>
 
 # Membros do Projeto
 <ul>
-  <li>DouglasCajueiro => https://github.com/douglasCajueiro </li>
-  <li>Gabriel Donnantuouni => https://github.com/gabrielDonnantuoni</li>
-  <li>André Sampaio => https://github.com/almsampaio</li>
   <li>Ruan Miguel => https://github.com/ruanmiguelgit</li>
 </ul>
 
